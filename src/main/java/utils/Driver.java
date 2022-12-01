@@ -38,7 +38,7 @@ public class Driver {
                     break;
             }
         }
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(305));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         driver.manage().window().maximize();
         return driver;
     }
