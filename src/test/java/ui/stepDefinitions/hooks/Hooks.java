@@ -1,6 +1,7 @@
 package ui.stepDefinitions.hooks;
 
 import io.cucumber.java.After;
+import io.cucumber.java.AfterAll;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 import org.openqa.selenium.OutputType;
@@ -9,12 +10,13 @@ import org.openqa.selenium.WebDriver;
 import utils.BrowserUtilities;
 import utils.Driver;
 import java.io.File;
+import java.io.IOException;
 import java.time.Duration;
 
 public class Hooks {
 //    public static WebDriver driver;
 
-    @Before // burda kütüphane olarak cucumber secilmeli
+    @Before("@myanno") // burda kütüphane olarak cucumber secilmeli
     public void setup() {
 //        driver = Driver.getDriver();
         Driver.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
@@ -23,6 +25,7 @@ public class Hooks {
 
     @After // burda kütüphane olarak cucumber secilmeli
     public void tearDown(Scenario scenario) {
+        System.out.println("Scenario Result="+scenario.getStatus());
         if (scenario.isFailed()) {
             final byte[] screenShot = ((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
             scenario.attach(screenShot, "image/png", scenario.getName() + "_screenshot");
