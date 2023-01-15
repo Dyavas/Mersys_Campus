@@ -44,7 +44,7 @@ Feature: Fees Page Functionality
         And the user should be able to input new Code in the Code box.
         And the user should be able to input new Priority in the Priority boxx.
         And the user should be able to click on two times Active button
-        And then user should be able to click on Save button
+        And then user should be able to click on Save buttona
         Then User should be able to see „Fee Type successfully updated“ message in message box
 
   @Songul
