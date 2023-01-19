@@ -87,9 +87,7 @@ public class US_012_Country_StepD {
         BrowserUtilities.clickWithJs(countryPage.countriesButton);
     }
 
-    @Given("the user accepts the cookies")
-    public void the_user_accepts_the_cookies() {
-    }
+ 
 
     @When("The user searches {string}")
     public void theUserSearches(String Name) {
