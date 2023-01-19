@@ -8,9 +8,6 @@ import ui.pages.commenPage.CommenPage;
 
 public class StatesPage extends CommenPage {
 
-    WebElement myElement;
-    WebDriverWait wait;
-
     //by Yusuf Sahin
     @FindBy(xpath = "//input[@formcontrolname='username']")
     public WebElement username;
@@ -126,6 +123,5 @@ public class StatesPage extends CommenPage {
     //by Yusuf Sahin
     @FindBy(xpath = "//span[contains(text(),'English')]")
     public WebElement english;
-
 
 }

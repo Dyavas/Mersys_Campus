@@ -27,5 +27,4 @@ public class DashboardPage extends CommenPage {
     @FindBy(xpath = "//span[text()='Cities']")
     public WebElement cities;
 
-
 }

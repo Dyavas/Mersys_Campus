@@ -149,6 +149,5 @@ public class US_014_StatesPage {
         System.out.println(noDataMessage);
 
         Assert.assertEquals("There is no data to display", noDataMessage);
-
     }
 }
