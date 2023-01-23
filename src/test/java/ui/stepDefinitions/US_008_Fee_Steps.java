@@ -32,8 +32,8 @@ public class US_008_Fee_Steps {
         us_008_fee_page.feesbutton.click();
     }
 
-    @And("the user should be able to click on + button")
-    public void theUserShouldBeAbleToClickOnButton() {
+    @And("the user should be able to click on + buttona")
+    public void theUserShouldBeAbleToClickOnButtona() {
 
 
        BrowserUtilities.waitForClickability(us_008_fee_page.addbutton,1).click();
@@ -64,8 +64,8 @@ public class US_008_Fee_Steps {
      us_008_fee_page.activebar.click();
     }
 
-    @And("then user should be able to click on Save button")
-    public void thenUserShouldBeAbleToClickOnSaveButton() {
+    @And("then user should be able to click on Save buttona")
+    public void thenUserShouldBeAbleToClickOnSaveButtona() {
      us_008_fee_page.savebutton.click();
 
     }

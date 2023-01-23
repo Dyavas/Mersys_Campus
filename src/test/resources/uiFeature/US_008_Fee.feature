@@ -13,12 +13,12 @@ Feature: Fees Page Functionality
       When the user click on Setup button
       And the user click on Parameters button
       And the user click on Fees  button
-      And the user should be able to click on + button
+      And the user should be able to click on + buttona
       Then the user should be able to input the Name in Name box.
       Then the user should be able to input new code in code box.
       And the user should be able to input new Priority in the Priority box.
       And the user should be able to click on two times Active button
-      And then user should be able to click on Save button
+      And then user should be able to click on Save buttona
     Then User should be able to see "Fee Type successfully created“ message in message box
 
 
@@ -44,7 +44,7 @@ Feature: Fees Page Functionality
         And the user should be able to input new Code in the Code box.
         And the user should be able to input new Priority in the Priority boxx.
         And the user should be able to click on two times Active button
-        And then user should be able to click on Save button
+        And then user should be able to click on Save buttona
         Then User should be able to see „Fee Type successfully updated“ message in message box
 
   @Songul
