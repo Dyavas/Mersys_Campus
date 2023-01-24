@@ -1,13 +1,11 @@
-package ui.stepDefinitions.parametersPage;
+package ui.stepDefinitions.parameters;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import ui.pages.parametersPage.FieldsPage;
 import ui.pages.parametersPage.ParametersPage;
 import utils.BrowserUtilities;
 import utils.Driver;
@@ -16,7 +14,7 @@ import java.awt.*;
 
 public class US_017_FieldsPageStepD {
     ParametersPage parametersPage = new ParametersPage();
-    FieldsPage fieldsPage = new FieldsPage();
+
 
     @When("the user should be to click on Parameter")
     public void theUserShouldBeToClickOnParameter() {
@@ -25,8 +23,8 @@ public class US_017_FieldsPageStepD {
 
     @Then("Verify existence of {string} Page")
     public void verifyExistenceOfPage(String text) {
-        BrowserUtilities.waitForVisible(fieldsPage.fieldsTitle, 2);
-        Assert.assertEquals(text, fieldsPage.fieldsTitle.getText());
+        BrowserUtilities.waitForVisible(parametersPage.fieldsTitle, 2);
+        Assert.assertEquals(text, parametersPage.fieldsTitle.getText());
     }
 
     @When("the user should be able to click on Fields Page")
@@ -38,16 +36,16 @@ public class US_017_FieldsPageStepD {
     @And("the user should be able to click on + button")
     public void theUserShouldBeAbleToClickOnButton() {
         BrowserUtilities.waitFor(2);
-        BrowserUtilities.waitForVisible(fieldsPage.fieldsAdd_Button, 5);
-        BrowserUtilities.clickWithJs(fieldsPage.fieldsAdd_Button);
+        BrowserUtilities.waitForVisible(parametersPage.addButton, 5);
+        BrowserUtilities.clickWithJs(parametersPage.addButton);
     }
 
 
     @When("the user should be able to input the {string} name")
     public void theUserShouldBeAbleToInputThe(String field) {
-        BrowserUtilities.waitForVisible(fieldsPage.fieldsName_Input, 2);
-        fieldsPage.fieldsName_Input.clear();
-        fieldsPage.fieldsName_Input.sendKeys(field);
+        BrowserUtilities.waitForVisible(parametersPage.nameInput, 2);
+        parametersPage.nameInput.clear();
+        parametersPage.nameInput.sendKeys(field);
 
     }
 
@@ -63,7 +61,7 @@ public class US_017_FieldsPageStepD {
 
     @And("then user should be able to click on Save button")
     public void thenUserShouldBeAbleToClickOnSaveButton() {
-        BrowserUtilities.clickWithJs(fieldsPage.fieldsSave_Button);
+        BrowserUtilities.clickWithJs(parametersPage.saveButton);
     }
 
     @Then("Verify the {string} warning")
@@ -81,37 +79,37 @@ public class US_017_FieldsPageStepD {
 
     @And("the user should be able to input the {string} code")
     public void theUserShouldBeAbleToInputTheCode(String field) {
-        BrowserUtilities.waitForVisible(fieldsPage.fieldsCode_Input, 2);
-        fieldsPage.fieldsCode_Input.clear();
-        fieldsPage.fieldsCode_Input.sendKeys(field);
+        BrowserUtilities.waitForVisible(parametersPage.codeInput, 2);
+        parametersPage.codeInput.clear();
+        parametersPage.codeInput.sendKeys(field);
     }
 
     @When("the user should be able to sourceInput the {string} name")
     public void theUserShouldBeAbleToSourceInputTheName(String text) {
-        BrowserUtilities.waitForVisible(fieldsPage.fieldsSourceName_Input, 2);
-        fieldsPage.fieldsSourceName_Input.sendKeys(text);
+        BrowserUtilities.waitForVisible(parametersPage.searchNameInput, 2);
+        parametersPage.searchNameInput.sendKeys(text);
     }
 
     @And("the user should be able to click on edit button")
     public void theUserShouldBeAbleToClickOnEditButton() {
         BrowserUtilities.waitFor(2);
-        BrowserUtilities.clickWithJs(fieldsPage.fieldsEdit_Button);
+        BrowserUtilities.clickWithJs(parametersPage.editButton);
     }
 
     @And("then user should be able to click on Source button")
     public void thenUserShouldBeAbleToClickOnSourceButton() {
-        BrowserUtilities.clickWithJs(fieldsPage.fieldsSource_Button);
+        BrowserUtilities.clickWithJs(parametersPage.searchButton);
     }
 
     @And("the user should be able to click on delete button")
     public void theUserShouldBeAbleToClickOnDeleteButton() {
         BrowserUtilities.waitFor(2);
-        BrowserUtilities.clickWithJs(fieldsPage.fieldsDelete_Button);
+        BrowserUtilities.clickWithJs(parametersPage.deleteButton);
     }
 
     @And("the user should be able to click on delete button of page")
     public void theUserShouldBeAbleToClickOnDeleteButtonOfPage() {
         BrowserUtilities.waitFor(2);
-        BrowserUtilities.clickWithJs(fieldsPage.fieldsDelete2_Button);
+        BrowserUtilities.clickWithJs(parametersPage.deleteConfirmationButton);
     }
 }

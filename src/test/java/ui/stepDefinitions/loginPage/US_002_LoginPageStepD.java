@@ -1,22 +1,19 @@
 package ui.stepDefinitions.loginPage;
-
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 import ui.pages.loginPage.LoginPage;
-import ui.pages.parametersPage.FieldsPage;
+import ui.pages.parametersPage.ParametersPage;
 import utils.BrowserUtilities;
 import utils.ConfigurationReader;
-import utils.Driver;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class US_002_LoginPageStepD {
-    LoginPage loginPage = new LoginPage();
-    FieldsPage fieldsPage = new FieldsPage();
+
+    ParametersPage parametersPage = new ParametersPage();
+    LoginPage loginPage=new LoginPage();
 
     @When("the user inputs a valid  email")
     public void theUserInputsAValidEmail() {
@@ -39,11 +36,12 @@ public class US_002_LoginPageStepD {
 
     @When("the user should be to click on {string} flag")
     public void theUserShouldBeToClickOnFlag(String text) {
-        BrowserUtilities.waitForVisible(fieldsPage.fieldsAktivFlag_Button, 2);
 
-        if (!fieldsPage.fieldsAktivFlag_Button.getText().contains(text)) {
-            BrowserUtilities.clickWithJs(fieldsPage.fieldsAktivFlag_Button);
-            BrowserUtilities.clickWithJs(fieldsPage.fieldsEnFlag_Button);
+        BrowserUtilities.waitForVisible(parametersPage.fieldsAktivFlag_Button, 2);
+
+        if (!parametersPage.fieldsAktivFlag_Button.getText().contains(text)) {
+            BrowserUtilities.clickWithJs(parametersPage.fieldsAktivFlag_Button);
+            BrowserUtilities.clickWithJs(parametersPage.fieldsEnFlag_Button);
 
         }
     }
@@ -51,12 +49,12 @@ public class US_002_LoginPageStepD {
     @Then("user verifies the titles are {string} visible")
     public void userVerifiesTheTitlesAreAndVisible(String schoolName) {
 
-        BrowserUtilities.waitForVisible(loginPage.schoolName, 2);
+        BrowserUtilities.waitForVisible(parametersPage.schoolName, 2);
 
-        if (!loginPage.schoolName.getText().contains(schoolName)) {
-            BrowserUtilities.clickWithJs(loginPage.adminButton);
-            BrowserUtilities.clickWithJs(loginPage.schoolsButton);
-            List<WebElement> schoolList = loginPage.schoolsList;
+        if (!parametersPage.schoolName.getText().contains(schoolName)) {
+            BrowserUtilities.clickWithJs(parametersPage.adminButton);
+            BrowserUtilities.clickWithJs(parametersPage.schoolsButton);
+            List<WebElement> schoolList = parametersPage.schoolsList;
 
             for (WebElement schoolElement : schoolList) {
                 if (schoolName == schoolElement.getText()) {

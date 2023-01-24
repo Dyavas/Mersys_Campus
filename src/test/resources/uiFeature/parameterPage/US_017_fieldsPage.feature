@@ -5,7 +5,7 @@
   #4- User should be able to edit Field and view successfully validating the message
   #5- When searching by name, the results should be matched the search terms.
   #By Davut Yavas
-@smoke
+
 Feature: US_017_User should be able to use Fields Page
 
   Background: the user goes to home page

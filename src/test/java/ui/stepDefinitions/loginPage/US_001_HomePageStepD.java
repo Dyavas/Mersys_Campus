@@ -3,24 +3,22 @@ package ui.stepDefinitions.loginPage;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
-import org.junit.Assert;
+import static org.junit.Assert.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import utils.BrowserUtilities;
 import utils.ConfigurationReader;
 import utils.Driver;
 
-import java.sql.SQLOutput;
-
 //import static utils.Driver.driver;// Manuel ekledim.
 
 
-public class US_001_LoginPageStepD {
+public class US_001_HomePageStepD {
 
 
     @Then("the user verifies that the url is {string}")
     public void theUserVerifiesThatTheUrlIs(String url) {
-        Assert.assertEquals(url, Driver.getDriver().getCurrentUrl());
+        assertEquals(url, Driver.getDriver().getCurrentUrl());
 
     }
 
@@ -38,7 +36,8 @@ public class US_001_LoginPageStepD {
 
     @Then("the user verifies that the title {string}")
     public void theUserVerifiesThatTheTitle(String title) {
-        Assert.assertEquals(title, Driver.getDriver().getTitle());
+
+        assertEquals(title, Driver.getDriver().getTitle());
     }
 
     @Given("the user goes to home page")
