@@ -32,6 +32,7 @@ public class US_001_HomePageStepD {
         } catch (Exception e) {
             System.out.println(e);
         }
+
     }
 
     @Then("the user verifies that the title {string}")

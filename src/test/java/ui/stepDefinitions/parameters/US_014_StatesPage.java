@@ -137,7 +137,6 @@ public class US_014_StatesPage {
 
     @Then("user should be able to click Delete button")
     public void userShouldBeAbleToClickDeleteButton() {
-
         parametersPage.deleteButton.click();
 
     }

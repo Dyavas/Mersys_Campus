@@ -19,8 +19,6 @@ import java.time.Duration;
 public class Hooks {
 
     //    public static WebDriver driver;
-    LoginPage loginPage = new LoginPage();
-    ParametersPage parametersPage=new ParametersPage();
 
     @Before // burda kütüphane olarak cucumber secilmeli.
     public void setup() {

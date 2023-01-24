@@ -30,7 +30,6 @@ public class US_008_FeePageStepD {
 
     @And("the user click on Fees  button")
     public void theUserClickOnFeesButton() {
-
         parametersPage.feesbutton.click();
     }
 

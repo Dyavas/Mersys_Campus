@@ -3,7 +3,7 @@
 # As a user I should be able to login with my account	Email address and password button should be functional
 # Valid email and password must be entered
 # Successful login after valid information is entered
-#  by Davut Yavas
+#  by Davut Yavas-
   @smoke @us02
   Feature: US_002 As a user I should be able to login with my account Email adress and password button should be functional
     Background: the user goes to home page

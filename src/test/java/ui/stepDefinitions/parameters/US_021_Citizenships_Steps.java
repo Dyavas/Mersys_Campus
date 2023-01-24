@@ -82,7 +82,6 @@ public class US_021_Citizenships_Steps {
     public void userShouldBeAbleToSeeCitizenshipSuccessfullyDeletedMessageInMessageBox() {
         BrowserUtilities.waitFor(1);
         String actualMessage = parametersPage.messagebox.getText();
-
         Assert.assertEquals("Citizenship successfully deleted", actualMessage);
 
     }

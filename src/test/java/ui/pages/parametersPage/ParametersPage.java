@@ -102,7 +102,6 @@ public class ParametersPage extends CommenPage {
     @FindBy(xpath = "(//input)[10]")
     public WebElement arrayButton;
 
-
     //    By Yusuf Sahin
 
     @FindBy(xpath = "//ms-edit-button/button")
