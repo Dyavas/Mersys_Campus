@@ -4,7 +4,7 @@
   #3- User should be able to delete Field and view, successfully validating the message
   #4- User should be able to edit Field and view successfully validating the message
   #5- When searching by name, the results should be matched the search terms.
-  #By Davut Yavas
+  #By Davut Yavas-
 @smoke
 Feature: US_020_User should be able to use Fields Settings Page
 

@@ -1,8 +1,8 @@
 #US_014
 #https://test.mersys.io/
-#by Yusuf Sahin.
+#by Yusuf Sahin-
 
-
+@smoke
   Feature: US_014 User should be able to use States Page
 
     Scenario: US_014_TC_01 user should be able to create a new State

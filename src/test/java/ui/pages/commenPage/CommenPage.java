@@ -7,5 +7,4 @@ public abstract class CommenPage {
     public CommenPage(){
         PageFactory.initElements(Driver.getDriver(),this);
     }
-
 }

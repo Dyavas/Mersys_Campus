@@ -1,19 +1,20 @@
 #US_013	As an admin user I should be able to use country Page functionality
 #https://test.mersys.io/cities/list
 #The country Page must be accessible when the URL is entered
-#by Mehmet Bozabali
+#by Mehmet Bozabali-
 
-@smoke3
+@smoke
 Feature: US_013 As an admin user I should be able to use city Page functionality
 
     Background:
-        Given The user goes to Test Home Page
-        And The user accepts the cookies
-        When The user enters with the right credentials
-        Then The user should login successfully
-        Given The user goes to city page
+        Given the user goes to home page
+        When the user accepts the cookies
+        When the user inputs a valid  email
+        And the user inputs a valid password
+        And the user clicks the Login button on the login page
+        When the user should be to click on "English" flag
 
-    @test5
+
     Scenario Outline: US_013_TC_01 The User should be able to create new city with required information
         When The user clicks add city button
         When The user clicks add country button
@@ -32,7 +33,7 @@ Feature: US_013 As an admin user I should be able to use city Page functionality
 #        | Germany     | Kassel |
 #        | Turkey      | Manisa |
 
-    @test2
+
     Scenario Outline: US_013_TC_02 The User should be able to edit city with required information
         When The user searches "<old city>" Name
         And The user clicks city edit button
@@ -47,7 +48,7 @@ Feature: US_013 As an admin user I should be able to use city Page functionality
 #            | Turgutlu      | Manisa  |
 
 
-    @test3
+
     Scenario Outline: US_013_TC_03 The User should be able to delete city
         When The user searches "<last city>" city
         And The user clicks city delete button
@@ -58,11 +59,10 @@ Feature: US_013 As an admin user I should be able to use city Page functionality
             | Almati     |
 #            | Dieburg    |
 #            | Manisa     |
-    @test4
+
     Scenario Outline: US_013_TC_04 The User should not be able to delete non existant city
         When The user searches "<last city>" city
         Then The user sees no data message
-
         Examples:
             | last city  |
             | Almati     |

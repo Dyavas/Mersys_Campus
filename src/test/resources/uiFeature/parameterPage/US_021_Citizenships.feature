@@ -1,12 +1,13 @@
-#By Songül Akkaya
+#By Songül Akkaya-
 
 Feature: Citizenships Page Functionality
-
-  Background: user must be logged in
-    When User navigate to "https://test.mersys.io"
-    And User enter valid username in username box
-    And User enter valid password in password box
-    Then User click anmeldung button
+  Background: the user goes to home page
+    Given the user goes to home page
+    When the user accepts the cookies
+    When the user inputs a valid  email
+    And the user inputs a valid password
+    And the user clicks the Login button on the login page
+    When the user should be to click on "English" flag
 
 
   Scenario: TC_01 User should be able to create new citizionships with required informations
@@ -45,7 +46,7 @@ Feature: Citizenships Page Functionality
     Then the user should be able to click Deletetwo button
     Then User should be able to see „Citizenship successfully deleted" message in message box
 
-  @Songul1
+
     Scenario: TC_04 User should not be able to delete non existant citizenship
     When the user click on Setup button
     And the user click on Parameters button
