@@ -1,13 +1,17 @@
 package ui.pages.parametersPage;
 
+import org.junit.Assert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import ui.pages.commenPage.CommenPage;
+import utils.Driver;
 
 import java.util.List;
 
-public class ParametersPage extends CommenPage {
+import static utils.BrowserUtilities.*;
 
+public class ParametersPage extends CommenPage {
     //   By Davut Yavas
 
     @FindBy(xpath = "(//div[@class='logo']/div/span)[1]")
@@ -30,6 +34,7 @@ public class ParametersPage extends CommenPage {
     public WebElement addButton;
     @FindBy(xpath = "(//input[@data-placeholder='Name'])[2]")
     public WebElement nameInput;
+
     @FindBy(xpath = "//div[contains(text(),'successfully')]")
     public WebElement successMessage;
     @FindBy(css = "mat-select[formcontrolname='id']")
@@ -38,6 +43,7 @@ public class ParametersPage extends CommenPage {
     public WebElement searchNameInput;
     @FindBy(xpath = "//span[contains(text(),'Search')]")
     public WebElement searchButton;
+
     @FindBy(css = "ms-delete-button[table='true']")
     public WebElement deleteButton;
     @FindBy(css = "button[type='Submit']")
@@ -140,7 +146,7 @@ public class ParametersPage extends CommenPage {
     @FindBy(xpath = "//span[contains(text(),'English')]")
     public WebElement english;
 
-    //   By Songül Akkaya Fees and CitizenshipsPage
+    //   By SongÃ¼l Akkaya Fees and CitizenshipsPage
 
     @FindBy(xpath = "(//span[text()='Fees'])[1]")
     public WebElement feesbutton;
@@ -168,4 +174,79 @@ public class ParametersPage extends CommenPage {
     @FindBy(xpath = "(//span[text()='Citizenships'])[1]")
     public WebElement citizenshipsButton;
 
+    //Zehra
+    @FindBy(xpath = "//input[@id='ms-text-field-1']")
+    public WebElement name_Input;
+    @FindBy(xpath = "//input[@id='ms-masked-text-field-0']")
+    public WebElement IBANInput;
+    @FindBy(xpath = "//input[@id='ms-text-field-2']")
+    public WebElement IntCodeInput;
+
+    @FindBy(id = "mat-slide-toggle-7-input")
+    public WebElement checkboxActive;
+
+
+
+    //ms-save-button[@class='ng-star-inserted']
+    @FindBy(tagName = "dynamic-view")
+    public WebElement message;
+    //dynamic-view[class='ng-star-inserted'] div
+    @FindBy(css = "div[class='mat-form-field-flex ng-tns-c77-95']")
+    public WebElement currencyDropdown;
+
+    @FindBy(css = "input[id=ms-text-field-0]")
+    public WebElement nameInputSearchBox;
+
+    @FindBy(xpath = "//div[@id='mat-select-value-7']")
+    public WebElement currencyInputSearchBox;
+
+
+
+    public void selectCurrency(String cur) {
+        currencyDropdown.click();
+        //Driver.getDriver().findElement(By.cssSelector("div[class='mat-form-field-flex ng-tns-c77-95']")).click();
+        Driver.getDriver().findElement(By.xpath("//span[normalize-space()='" + cur + "']")).click();
+
+    }
+
+    public void clickSaveButton() {
+        saveButton.click();
+    }
+    public void verifySaveButtonIsNotClickable() {///duzelt
+        if(!saveButton.isEnabled()){
+            clickSaveButton();
+            waitFor(1);
+            String actualMessage = message.getText();
+            waitFor(2);
+            Assert.assertFalse("test fail", actualMessage.isEmpty());
+            // System.out.println("click");
+        }else{
+            System.out.println(saveButton.isEnabled());
+            Assert.assertTrue(saveButton.isEnabled());
+        }
+    }
+    public void verfyBankAccOnPage(String name) {
+        String actualMessage=Driver.getDriver().findElement(By.xpath("//td[normalize-space()='"+name+"']")).getText();
+        Assert.assertEquals(name,actualMessage);
+    }
+
+    public void verfyIban(String IBAN) {
+        Assert.assertTrue(Driver.getDriver().findElement(By.xpath("//td[normalize-space()='"+IBAN+"']")).isDisplayed());
+    }
+
+    public void deleteBankAccFromList(String IBAN) {
+        Driver.getDriver().findElement(By.xpath("(//tr/td[contains(text(),'"+IBAN+"')]//../td)[7]/div[1]/ms-delete-button")).click();
+        clickWithJs(Driver.getDriver().findElement(By.xpath("//span[normalize-space()='Delete']")));
+
+    }
+
+    public void editButton(String IBAN) {
+        Driver.getDriver().findElement(By.xpath("(//tr/td[contains(text(),'"+IBAN+"')]//../td)[7]/div[1]/ms-edit-button")).click();
+        clickWithJs(Driver.getDriver().findElement(By.xpath("//span[normalize-space()='Edit']")));
+    }
+
+    public void selectCurrencyDropdownBox(String currency) {
+        currencyInputSearchBox.click();
+        Driver.getDriver().findElement(By.xpath("//span[normalize-space()='" + currency + "']")).click();
+    }
 }
