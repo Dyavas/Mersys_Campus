@@ -38,6 +38,7 @@ public class US_017_FieldsPageStepD {
         BrowserUtilities.waitFor(2);
         BrowserUtilities.waitForVisible(parametersPage.addButton, 5);
         BrowserUtilities.clickWithJs(parametersPage.addButton);
+
     }
 
 

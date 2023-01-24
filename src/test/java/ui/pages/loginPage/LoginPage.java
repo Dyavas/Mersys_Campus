@@ -5,7 +5,6 @@ import org.openqa.selenium.support.FindBy;
 import ui.pages.commenPage.CommenPage;
 
 public class LoginPage extends CommenPage {
-
     //By Davut Yavas
     @FindBy(xpath = "//input[@formcontrolname='username']")
     public WebElement username_Input;

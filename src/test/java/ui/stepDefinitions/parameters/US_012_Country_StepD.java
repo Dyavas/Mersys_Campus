@@ -52,7 +52,6 @@ public class US_012_Country_StepD {
     }
 
 
-
     @Given("The user goes to country page")
     public void theUserGoesToCountryPage(){
         BrowserUtilities.waitForVisible(parametersPage.countriesButton,5);

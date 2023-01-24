@@ -35,5 +35,4 @@ public class DashboardPage extends CommenPage {
     @FindBy(xpath = "//mat-radio-button")
     public List<WebElement> schoolsList;
 
-
 }

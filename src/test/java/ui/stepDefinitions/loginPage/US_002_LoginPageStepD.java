@@ -19,7 +19,6 @@ public class US_002_LoginPageStepD {
     public void theUserInputsAValidEmail() {
         BrowserUtilities.waitForVisible(loginPage.username_Input, 2);
         loginPage.username_Input.sendKeys(ConfigurationReader.getProperty("username"));
-
     }
 
     @And("the user inputs a valid password")

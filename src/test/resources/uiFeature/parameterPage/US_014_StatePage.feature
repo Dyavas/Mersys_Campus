@@ -1,6 +1,6 @@
 #US_014
 #https://test.mersys.io/
-#by Yusuf Sahin.
+#by Yusuf Sahin-
 
 @smoke
   Feature: US_014 User should be able to use States Page

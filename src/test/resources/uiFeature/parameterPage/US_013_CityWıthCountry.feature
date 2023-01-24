@@ -1,7 +1,7 @@
 #US_013	As an admin user I should be able to use country Page functionality
 #https://test.mersys.io/cities/list
 #The country Page must be accessible when the URL is entered
-#by Mehmet Bozabali
+#by Mehmet Bozabali-
 
 @smoke
 Feature: US_013 As an admin user I should be able to use city Page functionality

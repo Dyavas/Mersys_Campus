@@ -68,6 +68,7 @@ public class US_013_City_StepD {
         parametersPage.nameInput.clear();
         parametersPage.nameInput.sendKeys("NewDarmstadt");
         parametersPage.saveButton.click();
+
     }
 
     @And("The user clicks city delete button")

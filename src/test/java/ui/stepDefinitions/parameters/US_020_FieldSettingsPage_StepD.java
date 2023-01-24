@@ -60,6 +60,7 @@ public class US_020_FieldSettingsPage_StepD {
         if (!parametersPage.arrayButton.isEnabled()) {
             BrowserUtilities.clickWithJs(parametersPage.arrayButton);
             BrowserUtilities.waitFor(2);
+
         }
     }
 

@@ -1,7 +1,7 @@
 #US_001	As a user I should be able to access the home page
 #https://test.mersys.io/
 #The home page must be accessible when the URL is entered
-#by Davut Yavas
+#by Davut Yavas-
 
 @smoke
 Feature: US_001 As a user I should be able to access the Home Page
