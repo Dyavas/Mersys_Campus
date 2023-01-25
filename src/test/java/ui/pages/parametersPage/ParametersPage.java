@@ -13,39 +13,76 @@ import static utils.BrowserUtilities.*;
 
 public class ParametersPage extends CommenPage {
     //   By Davut Yavas
+     @FindBy(css = "span.title.dialog-title")
+    public WebElement fieldsTitle;
+    
+    @FindBy(css = "span[class='iso text-uppercase']")
+    public WebElement fieldsAktivFlag_Button;
+    
+    @FindBy(css = "span[class='iso']")
+    public WebElement fieldsEnFlag_Button;
+    
+    @FindBy(xpath = "(//mat-select[@role='combobox'])[1]")
+    public WebElement entetyType_Combobox;
 
+    @FindBy(xpath = "(//input[@inputmode='numeric'])[1]")
+    public WebElement ordner_Input;
+
+    @FindBy(xpath = "(//input[@inputmode='numeric'])[2]")
+    public WebElement numberOfValues_Input;
+
+    @FindBy(xpath = "(//span[@class='mat-slide-toggle-thumb'])[1]")
+    public WebElement requiredButton;
+
+    @FindBy(xpath = "(//span[@class='mat-slide-toggle-thumb'])[2]")
+    public WebElement enabledButton;
+
+    @FindBy(xpath = "(//input)[10]")
+    public WebElement arrayButton;
+    
     @FindBy(xpath = "(//div[@class='logo']/div/span)[1]")
     public WebElement schoolName;
+    
     @FindBy(css = "div.mat-tooltip-trigger")
     public WebElement adminButton;
+    
     @FindBy(xpath = "//mat-radio-button")
     public List<WebElement> schoolsList;
+    
     @FindBy(xpath = "//span[text()='Parameters']")
     public WebElement parametersButton;
+    
     @FindBy(xpath = "//span[text()='Fields']")
     public WebElement fieldsButton;
+    
     @FindBy(xpath = "//span[text()='Field Settings']")
     public WebElement fieldSettingsButton;
 
     //Mehmet Bozabali City  and Country
     @FindBy(xpath = "//span[text()='Cities']")
     public WebElement citiesButton;
+    
     @FindBy(css = "button[matbadgecolor='accent']")
     public WebElement addButton;
+    
     @FindBy(xpath = "(//input[@data-placeholder='Name'])[2]")
     public WebElement nameInput;
 
     @FindBy(xpath = "//div[contains(text(),'successfully')]")
     public WebElement successMessage;
+    
     @FindBy(css = "mat-select[formcontrolname='id']")
     public WebElement countryDropdown;
+    
     @FindBy(xpath = "//input[@data-placeholder='Name']")
     public WebElement searchNameInput;
+    
     @FindBy(xpath = "//span[contains(text(),'Search')]")
     public WebElement searchButton;
 
     @FindBy(css = "ms-delete-button[table='true']")
     public WebElement deleteButton;
+    
     @FindBy(css = "button[type='Submit']")
     public WebElement deleteConfirmationButton;
 
@@ -81,39 +118,15 @@ public class ParametersPage extends CommenPage {
     public WebElement schoolsButton;
 
     @FindBy(css = "label[for='mat-radio-20-input']")
-    public WebElement mySchoolButton;
-
-    // By Davut Yavas Fields Page
-    @FindBy(css = "span.title.dialog-title")
-    public WebElement fieldsTitle;
-    @FindBy(css = "span[class='iso text-uppercase']")
-    public WebElement fieldsAktivFlag_Button;
-    @FindBy(css = "span[class='iso']")
-    public WebElement fieldsEnFlag_Button;
-    @FindBy(xpath = "(//mat-select[@role='combobox'])[1]")
-    public WebElement entetyType_Combobox;
-
-    @FindBy(xpath = "(//input[@inputmode='numeric'])[1]")
-    public WebElement ordner_Input;
-
-    @FindBy(xpath = "(//input[@inputmode='numeric'])[2]")
-    public WebElement numberOfValues_Input;
-
-    @FindBy(xpath = "(//span[@class='mat-slide-toggle-thumb'])[1]")
-    public WebElement requiredButton;
-
-    @FindBy(xpath = "(//span[@class='mat-slide-toggle-thumb'])[2]")
-    public WebElement enabledButton;
-
-    @FindBy(xpath = "(//input)[10]")
-    public WebElement arrayButton;
+    public WebElement mySchoolButton;   
 
     //    By Yusuf Sahin
-
     @FindBy(xpath = "//ms-edit-button/button")
     public WebElement editButton;
+    
     @FindBy(xpath = "//ms-text-field[@formcontrolname='shortName']/input")
     public WebElement shortName;
+    
     @FindBy(css = "input[data-placeholder='Short Name']")
     public WebElement searchShortName;
 
@@ -175,23 +188,22 @@ public class ParametersPage extends CommenPage {
     public WebElement citizenshipsButton;
 
 
-    //Zehra
+    //Zehra Görmüs
     @FindBy(xpath = "//input[@id='ms-text-field-1']")
     public WebElement name_Input;
+    
     @FindBy(xpath = "//input[@id='ms-masked-text-field-0']")
     public WebElement IBANInput;
+    
     @FindBy(xpath = "//input[@id='ms-text-field-2']")
     public WebElement IntCodeInput;
-
+    
     @FindBy(id = "mat-slide-toggle-7-input")
     public WebElement checkboxActive;
-
-
-
-    //ms-save-button[@class='ng-star-inserted']
+    
     @FindBy(tagName = "dynamic-view")
     public WebElement message;
-    //dynamic-view[class='ng-star-inserted'] div
+    
     @FindBy(css = "div[class='mat-form-field-flex ng-tns-c77-95']")
     public WebElement currencyDropdown;
 
@@ -200,8 +212,6 @@ public class ParametersPage extends CommenPage {
 
     @FindBy(xpath = "//div[@id='mat-select-value-7']")
     public WebElement currencyInputSearchBox;
-
-
 
     public void selectCurrency(String cur) {
         currencyDropdown.click();
