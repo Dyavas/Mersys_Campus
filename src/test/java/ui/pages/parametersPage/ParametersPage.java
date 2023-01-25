@@ -174,6 +174,7 @@ public class ParametersPage extends CommenPage {
     @FindBy(xpath = "(//span[text()='Citizenships'])[1]")
     public WebElement citizenshipsButton;
 
+
     //Zehra
     @FindBy(xpath = "//input[@id='ms-text-field-1']")
     public WebElement name_Input;

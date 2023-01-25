@@ -109,7 +109,6 @@ public class BrowserUtilities {
 
 
     }
-
     /**
      * user can click "+" button on the any page
      */

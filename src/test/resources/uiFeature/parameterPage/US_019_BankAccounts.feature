@@ -114,6 +114,7 @@ Feature:Bank Accounts page functionality
     Then User should be able see "BC Bank Account 85" the Bank account on list
 
 
+
   Scenario: User should be able search a bank account with name and currency
     Given User is navigate to "Setup" "Parameters" module then click "Bank Accounts" page
     When User should be able to enter a Bank Acc. "BC Bank Account 85" to search box
