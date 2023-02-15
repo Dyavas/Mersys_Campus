@@ -19,7 +19,7 @@ public class BrowserUtilities {
         }
     }
 
-    // todo Click Metodu Javascript ile metodu
+    // todo Click Metodu Javascript ile
     public static void clickWithJs(WebElement element) {
         ((JavascriptExecutor) Driver.getDriver()).executeScript("arguments[0].scrollIntoView(true);", element);
         ((JavascriptExecutor) Driver.getDriver()).executeScript("arguments[0].click();", element);
