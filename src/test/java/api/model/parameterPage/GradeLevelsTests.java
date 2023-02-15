@@ -80,7 +80,6 @@ public class GradeLevelsTests {
                 .body("name",equalTo(randomName))
                 .log().body()
                 .extract().jsonPath().getString("id");
-
     }
 
     @Test(dependsOnMethods = "createGradeLevels")
