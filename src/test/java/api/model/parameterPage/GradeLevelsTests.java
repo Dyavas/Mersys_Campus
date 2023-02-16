@@ -112,6 +112,5 @@ public class GradeLevelsTests {
                 .then()
                 .statusCode(200)
                 .log().body();
-
     }
 }
