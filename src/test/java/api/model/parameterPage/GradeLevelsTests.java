@@ -99,7 +99,6 @@ public class GradeLevelsTests {
                 .then()
                 .log().body()
                 .statusCode(200);
-
     }
 
     @Test(dependsOnMethods = "updateGradeLevels")
