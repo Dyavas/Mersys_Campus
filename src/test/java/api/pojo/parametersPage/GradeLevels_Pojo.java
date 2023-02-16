@@ -2,15 +2,9 @@ package api.pojo.parametersPage;
 
 public class GradeLevels_Pojo {
     private String id;
-
     private String name;
     private String shortName;
-
     private  String order;
-
-    public boolean showToAllSchools=true;
-
-    public  boolean active=true;
 
     public String getId() {
         return id;
