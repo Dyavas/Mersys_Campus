@@ -90,7 +90,6 @@ public class GradeLevelsTests {
         gradeLevels.setShortName(RandomStringUtils.randomAlphabetic(3));
         gradeLevels.setOrder(RandomStringUtils.randomNumeric(3));
 
-
         given()
                 .cookies(cookies)
                 .contentType(ContentType.JSON)
